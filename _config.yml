@@ -9,15 +9,14 @@ markdown: redcarpet
 
 excerpt_separator: <!-- more -->
 
-title : 进击的xp!
-tagline: OpenCV OpenCL 
+title : 嗜水ghost的博客
+tagline: 杂记 心情 R 
 author : 
-  name : pengx17
-  email : pengxiao@outlook.com
-  github : https://github.com/pengx17
-  weibo : http://www.weibo.com/1773498301/profile
-  linkedin : http://cn.linkedin.com/pub/peng-xiao/40/92a/636
-  qq : 248901881
+  name : yujiajie
+  email : yujiajieax@gmail.com
+  github : https://github.com/Yujiajie
+  weibo : http://weibo.com/u/2628753663
+  qq : 735158606
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
 # Most places will/should use BASE_PATH to make the urls
@@ -83,7 +82,7 @@ pengx :
   comments :
     provider : duoshuo
     duoshuo :
-      short_name : pengx17
+      short_name : ghost
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
