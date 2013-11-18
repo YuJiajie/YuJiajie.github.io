@@ -33,36 +33,36 @@ Esri官网上10.1已经可以试用了，但是要破解估计还有一段时间
 
 ## 破解
 
-1. 复制5个文件到bin文件夹，license manager默认路径安装的就是（C:\Program
+1.复制5个文件到bin文件夹，license manager默认路径安装的就是（C:\Program
 Files\ArcGIS\License10.0\bin）;关键是9.xlic.lic那个文件（**也可以是其它名称如service.lic），可以自己用注册机制作，做的时候注意选择正确的feature和version；修改文件里的this-host为你的计算机名（**不能是中文**）；
 
 ![bin-gis][bin-gis]
 
-2. 打开bin文件夹里的lmtools.exe进行设置，只要选择license file就行，就是bin里的那个.lic文件(注册机做的)；
+2.打开bin文件夹里的lmtools.exe进行设置，只要选择license file就行，就是bin里的那个.lic文件(注册机做的)；
 
 ![lmtools-gis][lmtools-gis]
 
-3. 开启服务，不行就停掉再开，多试几次就可以了；
+3.开启服务，不行就停掉再开，多试几次就可以了；
 
-![lmtools-gis2][lmtools-gis2]
+![lmtools2-gis][lmtools2-gis]
 
-4. 检查license，出现最后一行就行了，如果不行，自己再做一个.lic；
+4.检查license，出现最后一行就行了，如果不行，自己再做一个.lic；
 
-![lmtools-gis3][lmtools-gis3]
+![lmtools3-gis][lmtools3-gis]
 
-5. 打开ArcGIS administrator设置（确保license manager已关）；
+5.打开ArcGIS administrator设置（确保license manager已关）；
 
 ![administrator1-gis][administrator1-gis]
 
-6. 设置下面几个，许可管理器记得改为localhost；
+6.设置下面几个，许可管理器记得改为localhost；
 
 ![administrator2-gis][administrator2-gis]
 
-7. 刷新一下就能看到许可了；
+7.刷新一下就能看到许可了；
 
 ![administrator3-gis][administrator3-gis]
 
-8. 复制AfCore.dll文件进bin文件夹；导入两个注册表文件
+8.复制AfCore.dll文件进bin文件夹；导入两个注册表文件
 
 ![regist-gis][regist-gis]
 
