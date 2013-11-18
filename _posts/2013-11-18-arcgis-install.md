@@ -34,7 +34,7 @@ Esri官网上10.1已经可以试用了，但是要破解估计还有一段时间
 ## 破解
 
 1.复制5个文件到bin文件夹，license manager默认路径安装的就是（C:\Program
-Files\ArcGIS\License10.0\bin）;关键是9.xlic.lic那个文件（**也可以是其它名称如service.lic），可以自己用注册机制作，做的时候注意选择正确的feature和version；修改文件里的this-host为你的计算机名（**不能是中文**）；
+Files\ArcGIS\License10.0\bin）;关键是9.xlic.lic那个文件（也可以是其它名称如service.lic），可以自己用注册机制作，做的时候注意选择正确的feature和version；修改文件里的this-host为你的计算机名（**不能是中文**）；
 
 ![bin-gis][bin-gis]
 
