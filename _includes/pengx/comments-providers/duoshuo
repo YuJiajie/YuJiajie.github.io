@@ -1,7 +1,7 @@
 <!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread"></div>
+	<div class="ds-thread"></div>
 <script type="text/javascript">
-var duoshuoQuery = {short_name:"{{ site.pengx.comments.duoshuo.short_name }}"};
+var duoshuoQuery = {short_name:"yuyu"};
 	(function() {
 		var ds = document.createElement('script');
 		ds.type = 'text/javascript';ds.async = true;
@@ -10,5 +10,5 @@ var duoshuoQuery = {short_name:"{{ site.pengx.comments.duoshuo.short_name }}"};
 		(document.getElementsByTagName('head')[0] 
 		|| document.getElementsByTagName('body')[0]).appendChild(ds);
 	})();
-</script>
+	</script>
 <!-- Duoshuo Comment END -->

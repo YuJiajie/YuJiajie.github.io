@@ -81,7 +81,7 @@ pengx :
   #
   comments :
     provider : duoshuo
-    duoshuo :
+    duoshuo : yujiajie
       short_name : ghost
    
   # Settings for analytics helper
