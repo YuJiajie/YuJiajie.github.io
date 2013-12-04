@@ -2,7 +2,7 @@
 layout: post
 keywords: 朱鹮 crested ibis sibling rivalry
 description: blog
-title: 朱鹮幼鸟竞争（Sibling Rivalry of crested ibis）
+title: 朱鹮幼鸟竞争
 categories: [Blog]
 tags: [科研笔记]
 group: archive
