@@ -2,13 +2,12 @@
 layout: post
 keywords: 朱鹮 crested ibis sibling rivalry
 description: blog
-title: "朱鹮幼鸟竞争"
+title: 朱鹮幼鸟竞争
 categories: [Blog]
 tags: [科研笔记]
 group: archive
 icon: bullhorn
 ---
-
 {% include pengx/setup %}
 
 > 2013年5月12日~6月12日，我们对研究区域内4对朱鹮的巢进行了观察，并利用便携式数码摄像机对其中一个2只幼体的巢进行了详细拍摄。拍摄点选在距营巢树约20m处的山坡上，视野开阔并有适量遮蔽物。野外全天工作时间为6:00~18:00，从观察到亲鸟飞回巢区时开始录制，直到亲鸟飞离巢区后或停于周边树枝休息幼鸟无明显争食行为后结束录制。同时，研究人员用10倍的双筒望远镜进行观察，记录亲鸟回巢时间、进食个体及次序、幼鸟活动情况等基本信息以补充校正视频信息。感谢李欣海老师、翟天庆局长、王远师姐以及杜峰村的村民们。
@@ -282,17 +281,6 @@ length(Feed1$Feed)/length(unique(Feed1$Date))
 {% highlight r %}
 # 单次有喂食回巢中递食的平均次数
 source("D:/R/function/Diff_vector.R")
-{% endhighlight %}
-
-
-
-{% highlight text %}
-## Warning: input string 2 is invalid in this locale
-{% endhighlight %}
-
-
-
-{% highlight r %}
 Frequence <- rev(Diff.vector(rev(as.numeric(table(Feed1$Feed_ID)))))
 Times <- 1:11
 lapply(list(mean, sd), function(f) f(rep(Times, Frequence)))
@@ -334,7 +322,7 @@ abp <- barplot(table(Feed1[, 17]), xlab = "Individual", ylab = "Feeding Times",
 text(abp, taf + 10, format(taf), col = "blue")
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-4.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-4.png) 
 
 <div class="text-center">图1 不同个体进食分配</div>
 
@@ -380,7 +368,7 @@ qplot(x=Sequence,y=Proportion,data=Prop,group=Group)+
         legend.text=element_text(size=15),legend.position=c(0.5,0.9),legend.key=element_blank())
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-6.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-6.png) 
 
 <div class="text-center">图2 不同个体进食比例的周期性变化（平均数±标准误）</div>
 
@@ -405,7 +393,7 @@ Error + aes(y=Attack_Mean, ymin=Attack_lower, ymax=Attack_upper)+
         legend.key=element_blank())
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-7.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-7.png) 
 
 <div class="text-center">图3 不同个体啄击次数的周期性变化（平均数±标准误）</div>
 
@@ -424,7 +412,7 @@ Error+ aes(y=Time_Mean, ymin=Time_lower, ymax=Time_upper) + geom_errorbar(aes(li
         legend.key=element_blank())
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-8.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-8.png) 
 
 <div class="text-center">图4 不同个体获得食物所需的时间（平均数±标准误）</div>
 
@@ -451,7 +439,7 @@ points(FeedBoutError[FeedBoutError$Individual=='B','Time_Mean']~seq(1,11,1),col=
 legend(9,430,legend=c('A个体','B个体'),pch=c(4,3),col=c('blue','red'))
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-9.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-9.png) 
 
 <div class="text-center">图5 不同个体获得食物所需的时间</div>
 
@@ -463,7 +451,7 @@ hist(Time_A)
 hist(Time_B)
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-10.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-10.png) 
 
 
 做对数变换后
@@ -475,7 +463,7 @@ hist(log(Time_B))
 par(mfrow = c(1, 1))
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-11.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-11.png) 
 
 
 对变换后数据做t检验
@@ -545,7 +533,7 @@ text(5,0.9,labels=paste0("r = ",round(cor_P_A2$estimate,3),"\n",
                             "p = ",round(cor_P_A2$p.value,3)),col="red")
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-14.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-14.png) 
 
 <div class="text-center">图6 A个体体啄击次数与进食比例的相关性</div>
 
@@ -569,7 +557,7 @@ text(5,120,labels=paste0("r = ",round(cor_Num_A2$estimate,3),"\n",
                             "p = ",round(cor_Num_A2$p.value,3)),col="red")
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-15.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-15.png) 
 
 <div class="text-center">图7 A个体体啄击次数与进食次数的相关性</div>
 
@@ -597,7 +585,7 @@ text(6,0.7,labels=paste0("r = ",round(cor_P_B2$estimate,3),"\n",
                             "p = ",round(cor_P_B2$p.value,3)),col="red")
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-16.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-16.png) 
 
 <div class="text-center">图8 B个体体啄击次数与进食比例的相关性</div>
 
@@ -623,7 +611,7 @@ text(12,85,labels=paste0("r = ",round(cor_Num_B2$estimate,3),"\n",
                             "p = ",round(cor_Num_B2$p.value,3)),col="red")
 {% endhighlight %}
 
-![center](/figure/2013-12-04-ibis-behavior-paper/unnamed-chunk-17.png) 
+![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-17.png) 
 
 <div class="text-center">图9 B个体体啄击次数与进食次数的相关性</div>
 
