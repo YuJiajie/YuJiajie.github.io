@@ -1,6 +1,6 @@
 ---
 layout: post
-keywords: 朱鹮 crested ibis sibling rivalry
+keywords: Crested ibis sibling rivalry
 description: blog
 title: 朱鹮幼鸟竞争
 categories: [Blog]
@@ -10,9 +10,9 @@ icon: bullhorn
 ---
 {% include pengx/setup %}
 
-> 2013年5月12日~6月12日，我们对研究区域内4对朱鹮的巢进行了观察，并利用便携式数码摄像机对其中一个2只幼体的巢进行了详细拍摄。拍摄点选在距营巢树约20m处的山坡上，视野开阔并有适量遮蔽物。野外全天工作时间为6:00~18:00，从观察到亲鸟飞回巢区时开始录制，直到亲鸟飞离巢区后或停于周边树枝休息幼鸟无明显争食行为后结束录制。同时，研究人员用10倍的双筒望远镜进行观察，记录亲鸟回巢时间、进食个体及次序、幼鸟活动情况等基本信息以补充校正视频信息。感谢李欣海老师、翟天庆局长、王远师姐以及杜峰村的村民们。
+2013年5月12日~6月12日，我们对研究区域内4对朱鹮的巢进行了观察，并利用便携式数码摄像机对其中一个2只幼体的巢进行了详细拍摄。拍摄点选在距营巢树约20m处的山坡上，视野开阔并有适量遮蔽物。野外全天工作时间为6:00~18:00，从观察到亲鸟飞回巢区时开始录制，直到亲鸟飞离巢区后或停于周边树枝休息幼鸟无明显争食行为后结束录制。同时，研究人员用10倍的双筒望远镜进行观察，记录亲鸟回巢时间、进食个体及次序、幼鸟活动情况等基本信息以补充校正视频信息。感谢李欣海老师、翟天庆局长、王远师姐以及杜峰村的村民们。
 
-## 数据
+# 数据
 
 {% highlight r %}
 Feed <- read.csv("D:/zhuhuan/CrestedIbisFeedingData_check_combination.csv", 
@@ -67,13 +67,13 @@ table(Feed1$Feed_ID)
 {% endhighlight %}
 
 
-## 基本信息
+# 基本信息
 
-> 包括不同个体啄击、进食的情况以及亲鸟喂食的基本信息
+包括不同个体啄击、进食的情况以及亲鸟喂食的基本信息
 
-### 攻击情况
+## 攻击情况
 
-> B个体的各类啄击行为都显著高于A个体
+B个体的各类啄击行为都显著高于A个体
 
 
 {% highlight r %}
@@ -208,9 +208,9 @@ chisq.test(unlist(atu))
 {% endhighlight %}
 
 
-### 递食情况
+## 递食情况
 
-> 总共拍摄记录17天，每天平均回巢喂食10次、递食46次，每次回巢平均递食5次
+总共拍摄记录17天，每天平均回巢喂食10次、递食46次，每次回巢平均递食5次
 
 
 {% highlight r %}
@@ -297,9 +297,9 @@ lapply(list(mean, sd), function(f) f(rep(Times, Frequence)))
 {% endhighlight %}
 
 
-### 不同个体进食分配
+## 不同个体进食分配
 
-> 不同个体进食的次数上无显著差异
+不同个体进食的次数上无显著差异
 
 
 {% highlight r %}
@@ -324,9 +324,9 @@ text(abp, taf + 10, format(taf), col = "blue")
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-4.png) 
 
-<div class="text-center">图1 不同个体进食分配</div>
+##### 图1 不同个体进食分配
 
-差异性检验
+### 差异性检验
 
 {% highlight r %}
 chisq.test(taf)  # A and B 
@@ -344,13 +344,13 @@ chisq.test(taf)  # A and B
 
 --------------------------------------------
 
-## 进食和攻击的周期性变化
+# 进食和攻击的周期性变化
 
-> 进食比例、啄击次数的周期变化情况以及不同个体乞得进食所需时间的动态情况
+进食比例、啄击次数的周期变化情况以及不同个体乞得进食所需时间的动态情况
 
-### 进食比例的周期变化
+## 进食比例的周期变化
 
-> 竞争回合对应的是单次回巢喂食中递食的次序，由于单次回巢平均递食5次，所以越靠后的竞争回合出现的递食次数越少。进食比例动态基本成以2次进食为周期的波动：先是A个体主要进食，两回合后换为B个体主要进食。
+竞争回合对应的是单次回巢喂食中递食的次序，由于单次回巢平均递食5次，所以越靠后的竞争回合出现的递食次数越少。进食比例动态基本成以2次进食为周期的波动：先是A个体主要进食，两回合后换为B个体主要进食。
 
 
 {% highlight r %}
@@ -370,11 +370,11 @@ qplot(x=Sequence,y=Proportion,data=Prop,group=Group)+
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-6.png) 
 
-<div class="text-center">图2 不同个体进食比例的周期性变化（平均数±标准误）</div>
+##### 图2 不同个体进食比例的周期性变化（平均数±标准误）
 
-### 啄击次数的周期变化
+## 啄击次数的周期变化
 
-> 啄击次数的动态与进食比例的动态吻合良好，B个体在靠后的竞争回合中啄击次数更多，A个体恰好相反。
+啄击次数的动态与进食比例的动态吻合良好，B个体在靠后的竞争回合中啄击次数更多，A个体恰好相反。
 
 
 {% highlight r %}
@@ -395,11 +395,11 @@ Error + aes(y=Attack_Mean, ymin=Attack_lower, ymax=Attack_upper)+
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-7.png) 
 
-<div class="text-center">图3 不同个体啄击次数的周期性变化（平均数±标准误）</div>
+##### 图3 不同个体啄击次数的周期性变化（平均数±标准误）
 
-### 进食的时间消耗的动态
+## 进食的时间消耗的动态
 
-> 反映不同个体在各个竞争回合中平均每次获得食物所需的时间（平均数±标准误），B个体略微高于A个体。
+反映不同个体在各个竞争回合中平均每次获得食物所需的时间（平均数±标准误），B个体略微高于A个体。
 
 
 {% highlight r %}
@@ -414,11 +414,11 @@ Error+ aes(y=Time_Mean, ymin=Time_lower, ymax=Time_upper) + geom_errorbar(aes(li
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-8.png) 
 
-<div class="text-center">图4 不同个体获得食物所需的时间（平均数±标准误）</div>
+##### 图4 不同个体获得食物所需的时间（平均数±标准误）
 
-### 不同个体在取食上花费的时间无显著性差异
+## 不同个体在取食上花费的时间无显著性差异
 
-> 给出散点分布信息并做对应分布的差异性检验
+给出散点分布信息并做对应分布的差异性检验
 
 
 {% highlight r %}
@@ -441,9 +441,9 @@ legend(9,430,legend=c('A个体','B个体'),pch=c(4,3),col=c('blue','red'))
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-9.png) 
 
-<div class="text-center">图5 不同个体获得食物所需的时间</div>
+##### 图5 不同个体获得食物所需的时间
 
-原始数据分布不正态
+### 原始数据分布不正态
 
 {% highlight r %}
 par(mfrow = c(1, 2))
@@ -454,7 +454,7 @@ hist(Time_B)
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-10.png) 
 
 
-做对数变换后
+### 做对数变换后
 
 {% highlight r %}
 par(mfrow = c(1, 2))
@@ -466,7 +466,7 @@ par(mfrow = c(1, 1))
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-11.png) 
 
 
-对变换后数据做t检验
+### 对变换后数据做t检验
 
 {% highlight r %}
 t.test(log(Time_A), log(Time_B))
@@ -489,7 +489,7 @@ t.test(log(Time_A), log(Time_B))
 {% endhighlight %}
 
 
-对原始数据做非参数检验(‘Mann-Whitney’检验)
+### 对原始数据做非参数检验(‘Mann-Whitney’检验)
 
 {% highlight r %}
 wilcox.test(Time_A, Time_B)
@@ -508,11 +508,11 @@ wilcox.test(Time_A, Time_B)
 
 ----------------------------------------------------
 
-## 攻击与进食的相关性分析
+# 攻击与进食的相关性分析
 
-> 由于递食11次的情况只出现过1次，在算进食比例时会有很大的误导，所以将其去除。去除后，对于A个体啄击次数与进食的比例和进食次数都有显著的正相关；对于B个体，啄击次数与进食比例显著正相关，与进食次数不相关。
+由于递食11次的情况只出现过1次，在算进食比例时会有很大的误导，所以将其去除。去除后，对于A个体啄击次数与进食的比例和进食次数都有显著的正相关；对于B个体，啄击次数与进食比例显著正相关，与进食次数不相关。
 
-### A个体啄击次数与进食比例的线性相关情况
+## A个体啄击次数与进食比例的线性相关情况
 
 {% highlight r %}
 Attack_Mean_A <- FeedBoutError[FeedBoutError$Individual=="A","Attack_Mean"]
@@ -535,9 +535,9 @@ text(5,0.9,labels=paste0("r = ",round(cor_P_A2$estimate,3),"\n",
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-14.png) 
 
-<div class="text-center">图6 A个体体啄击次数与进食比例的相关性</div>
+#####图6 A个体体啄击次数与进食比例的相关性
 
-### A个体啄击次数与进食次数的线性相关情况
+## A个体啄击次数与进食次数的线性相关情况
 
 {% highlight r %}
 Num.feed_A <- Prop[Prop$Group=="A","Ng"]
@@ -559,11 +559,11 @@ text(5,120,labels=paste0("r = ",round(cor_Num_A2$estimate,3),"\n",
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-15.png) 
 
-<div class="text-center">图7 A个体体啄击次数与进食次数的相关性</div>
+##### 图7 A个体体啄击次数与进食次数的相关性
 
-### B个体啄击次数与进食比例的线性相关情况
+## B个体啄击次数与进食比例的线性相关情况
 
-> 去除11回合后显著性降低，但p值依然小于0.05，因为对于B来说第9，10回合中的攻击性格外强，对相关性影响大于11回合。
+去除11回合后显著性降低，但p值依然小于0.05，因为对于B来说第9，10回合中的攻击性格外强，对相关性影响大于11回合。
 
 
 {% highlight r %}
@@ -587,11 +587,11 @@ text(6,0.7,labels=paste0("r = ",round(cor_P_B2$estimate,3),"\n",
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-16.png) 
 
-<div class="text-center">图8 B个体体啄击次数与进食比例的相关性</div>
+##### 图8 B个体体啄击次数与进食比例的相关性
 
-### B个体啄击次数与进食次数的线性相关情况
+## B个体啄击次数与进食次数的线性相关情况
 
-> B增加攻击次数能保证一定比例的进食机会，但攻击次数与获得食物的量并无正相关。在喂食靠后的回合中（尤其是9、10回合），B个体需付出更多的努力来保持合理的进食比例，然而单次回巢喂食的平均次数为4.5±1.8次之间。
+B增加攻击次数能保证一定比例的进食机会，但攻击次数与获得食物的量并无正相关。在喂食靠后的回合中（尤其是9、10回合），B个体需付出更多的努力来保持合理的进食比例，然而单次回巢喂食的平均次数为4.5±1.8次之间。
 
 
 {% highlight r %}
@@ -613,7 +613,7 @@ text(12,85,labels=paste0("r = ",round(cor_Num_B2$estimate,3),"\n",
 
 ![center](/image/2013-12-04-ibis-behavior-paper/unnamed-chunk-17.png) 
 
-<div class="text-center">图9 B个体体啄击次数与进食次数的相关性</div>
+##### 图9 B个体体啄击次数与进食次数的相关性
 
 
 
