@@ -497,3 +497,15 @@ del {
 .post {
  border-top-width: 5px;
 }
+
+/* 图片居中，五级标题居中作为图的编号 */
+[alt=center] {
+  display: block;
+  margin: auto;
+}
+
+h5 {
+  text-align: center;
+  padding-bottom:10px;
+}
+

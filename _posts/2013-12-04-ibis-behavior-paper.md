@@ -342,7 +342,6 @@ chisq.test(taf)  # A and B
 ## X-squared = 2.713, df = 1, p-value = 0.09954
 {% endhighlight %}
 
---------------------------------------------
 
 # 进食和攻击的周期性变化
 
@@ -506,7 +505,6 @@ wilcox.test(Time_A, Time_B)
 ## alternative hypothesis: true location shift is not equal to 0
 {% endhighlight %}
 
-----------------------------------------------------
 
 # 攻击与进食的相关性分析
 
