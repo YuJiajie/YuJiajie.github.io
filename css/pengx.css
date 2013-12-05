@@ -59,7 +59,7 @@ html, body, div.wrapper {
 
 /* 段落样式 */
 .paragraph {
-  font-size: 18px;
+  font-size: 15px;
   text-indent: 2em;
 }
 
@@ -497,4 +497,3 @@ del {
 .post {
  border-top-width: 5px;
 }
-
