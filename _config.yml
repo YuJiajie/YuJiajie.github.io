@@ -82,7 +82,7 @@ pengx :
   comments :
     provider : duoshuo
     duoshuo : yujiajie
-      short_name :
+    short_name :
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
