@@ -12,7 +12,7 @@ icon: bullhorn
 
 > 此文为有关朱鹮幼鸟竞争的研究记录及分析代码。
 
-![center](/image/2013-12-04-ibis-behavior-paper/ibis.jeg)
+![center](/image/2013-12-04-ibis-behavior-paper/ibis.png)
 
 # 摘要
 
