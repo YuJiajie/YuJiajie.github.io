@@ -86,10 +86,6 @@ with(warpbreaks, tapply(breaks, tension, function(x) hist(x, freq = F)))
 
 ![center](/image/2013-12-09-multiple-comparison/unnamed-chunk-51.png) ![center](/image/2013-12-09-multiple-comparison/unnamed-chunk-52.png) ![center](/image/2013-12-09-multiple-comparison/unnamed-chunk-53.png) 
 
-y <- rt(200, df = 5)
-qqnorm(y); qqline(y, col = 2)
-qqplot(y, rt(300, df = 5))
-
 ## <a name="A2">方差分析表</a>
 > <a href="#A3">对比双因素结果</a>
 
