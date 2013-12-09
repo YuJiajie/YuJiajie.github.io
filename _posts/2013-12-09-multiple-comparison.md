@@ -103,7 +103,7 @@ print(anov.tb, type = "html", caption.placement = getOption("xtable.caption.plac
 {% endhighlight %}
 
 <!-- html table generated in R 3.0.0 by xtable 1.7-1 package -->
-<!-- Mon Dec 09 11:27:55 2013 -->
+<!-- Mon Dec 09 12:19:53 2013 -->
 <TABLE border=1>
 <CAPTION ALIGN="top"> 方差分析表 </CAPTION>
 <TR> <TH>  </TH> <TH> Df </TH> <TH> Sum Sq </TH> <TH> Mean Sq </TH> <TH> F value </TH> <TH> Pr(&gt F) </TH>  </TR>
@@ -246,7 +246,7 @@ print(anov.tb, type = "html", caption.placement = getOption("xtable.caption.plac
 {% endhighlight %}
 
 <!-- html table generated in R 3.0.0 by xtable 1.7-1 package -->
-<!-- Mon Dec 09 11:27:56 2013 -->
+<!-- Mon Dec 09 12:19:53 2013 -->
 <TABLE border=1>
 <CAPTION ALIGN="top"> 方差分析表 </CAPTION>
 <TR> <TH>  </TH> <TH> Df </TH> <TH> Sum Sq </TH> <TH> Mean Sq </TH> <TH> F value </TH> <TH> Pr(&gt F) </TH>  </TR>
@@ -279,8 +279,8 @@ summary(tuk2)
 ## 
 ## Linear Hypotheses:
 ##            Estimate Std. Error t value Pr(>|t|)   
-## M - L == 0   -10.00       3.87   -2.58   0.0337 * 
-## H - L == 0   -14.72       3.87   -3.80   0.0012 **
+## M - L == 0   -10.00       3.87   -2.58   0.0335 * 
+## H - L == 0   -14.72       3.87   -3.80   0.0011 **
 ## H - M == 0    -4.72       3.87   -1.22   0.4474   
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
