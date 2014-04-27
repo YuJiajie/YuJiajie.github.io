@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 keywords: 
 description: blog
@@ -20,3 +20,5 @@ icon: bullhorn
 \* windows 终端终止程序用Ctrl+Z，再按Enter。
 
 [result]: /image/post/count.png
+
+
