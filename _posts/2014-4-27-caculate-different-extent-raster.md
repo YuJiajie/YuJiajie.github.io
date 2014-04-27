@@ -8,7 +8,9 @@ tags: [ArcGis 栅格计算器]
 group: archive
 icon: bullhorn
 ---
+
 最近用ArcGis 10帮同学做不同栅格的叠加计算，遇到些问题，google解决后记录于此。目的很简单，就是把不同栅格进行叠加，重叠的区域进行加和，不重叠区域保持不变。步骤如下：
+
 1. 打开Spatial Analyst Tools > Map Algebra > Raster Caculator
 
 2. Environment Settings > Processing Extent > Extent 设置为将要计算的栅格中extent最大的栅格
