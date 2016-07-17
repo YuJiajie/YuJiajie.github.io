@@ -53,7 +53,7 @@ icon: bullhorn
 ![luoxidaqiao3][luoxidaqiao3]
 
 [luoxidaqiao1]: /image/post/20160717-travel/luoxidaqiao1.jpg
-[luoxitaqiao2]: /image/post/20160717-travel/luoxidaqiao2.jpg
+[luoxidaqiao2]: /image/post/20160717-travel/luoxidaqiao2.jpg
 [dafushan]: /image/post/20160717-travel/xiaopiti.jpg
 [lutu]: /image/post/20160717-travel/lutu.jpg
 [datuoluo]: /image/post/20160717-travel/datuoluo.jpg
