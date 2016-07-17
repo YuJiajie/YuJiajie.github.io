@@ -52,17 +52,14 @@ icon: bullhorn
 
 ![luoxidaqiao3][luoxidaqiao3]
 
-[luoxidaqiao1]: /image/post/2016-07-17-travel/luoxidaqiao1.jpg
-[luoxitaqiao2]: /image/post/2016-07-17-travel/luoxidaqiao2.jpg
-[dafushan]: /image/post/2016-07-17-travel/xiaopiti.jpg
-[lutu]: /image/post/2016-07-17-travel/lutu.jpg
-[datuoluo]: /image/post/2016-07-17-travel/datuoluo.jpg
-[men]: /image/post/2016-07-17-travel/men.jpg
-[xiangzi]: /image/post/2016-07-17-travel/xiangzi.jpg
-[zhuanzhu]: /image/post/2016-07-17-travel/zhuanzhu.jpg
-[nainiuhuanghou]: /image/post/2016-07-17-travel/nainiuhuanghou.jpg
-[ruye]: /image/post/2016-07-17-travel/ningjing.jpg
-[luoxidaqiao3]: /image/post/2016-07-17-travel/luoxidaqiao3.jpg
-
-
-
+[luoxidaqiao1]: /image/post/20160717-travel/luoxidaqiao1.jpg
+[luoxitaqiao2]: /image/post/20160717-travel/luoxidaqiao2.jpg
+[dafushan]: /image/post/20160717-travel/xiaopiti.jpg
+[lutu]: /image/post/20160717-travel/lutu.jpg
+[datuoluo]: /image/post/20160717-travel/datuoluo.jpg
+[men]: /image/post/20160717-travel/men.jpg
+[xiangzi]: /image/post/20160717-travel/xiangzi.jpg
+[zhuanzhu]: /image/post/20160717-travel/zhuanzhu.jpg
+[nainiuhuanghou]: /image/post/20160717-travel/nainiuhuanghou.jpg
+[ruye]: /image/post/20160717-travel/ningjing.jpg
+[luoxidaqiao3]: /image/post/20160717-travel/luoxidaqiao3.jpg
