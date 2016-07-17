@@ -40,7 +40,7 @@ icon: bullhorn
 
 ![men][men]
 ![xiangzi][xiangzi]
-![wuding][wuding]
+![wuding][wuling]
 ![zhuanzhu][zhuanzhu]
 ![nainiuhuanghou][nainiuhuanghou]
 
@@ -59,6 +59,7 @@ icon: bullhorn
 [datuoluo]: /image/post/20160717-travel/datuoluo.jpg
 [men]: /image/post/20160717-travel/men.jpg
 [xiangzi]: /image/post/20160717-travel/xiangzi.jpg
+[wuling]: /image/post/20160717-travel/wuling.jpg
 [zhuanzhu]: /image/post/20160717-travel/zhuanzhu.jpg
 [nainiuhuanghou]: /image/post/20160717-travel/nainiuhuanghou.jpg
 [ruye]: /image/post/20160717-travel/ningjing.jpg
