@@ -22,11 +22,13 @@ icon: bullhorn
 
 ## 2.爬取新闻标题+来源和时间+摘要
 
-2016年8月21日，进入百度新闻，搜索[林丹 李宗伟]，共给返回38页结果，其中前37页每页20条，第38页18条，共758条新闻。
+2016年8月21日，进入百度新闻，搜索[林丹 李宗伟]，共给返回38页结果，前37页每页20条，第38页18条，共758条新闻。简单分析一下，第一页网址固定，第二页至第38页通过"pn"索引。
 
+### 爬取网页数据用到的R包
 ```r
-library(rvest) #爬取网页数据用到的R包
-
+library(rvest) 
+```
+```r
 ## 保存第1页网址
 url <- "http://news.baidu.com/ns?cl=2&rn=20&tn=news&word=%E6%9E%97%E4%B8%B9%20%E6%9D%8E%E5%AE%97%E4%BC%9F"
 
@@ -43,41 +45,51 @@ page <- cbind(Title,Author,Abstract)
 url.other <- sapply(seq(20,37*20,20),function(i) {
   str_c("http://news.baidu.com/ns?word=%E6%9E%97%E4%B8%B9%20%E6%9D%8E%E5%AE%97%E4%BC%9F&pn=",i,"&cl=2&ct=0&tn=news&rn=20&ie=utf-8&bt=0&et=0")
   })
-
-## 每页重复工作
+```
+### 其余页面既然有规律就可以用循环来完成每页的重复工作
+```r
+## 每页相同的工作
 myfun = function(x) {
   Title = url.other[x] %>%read_html("UTF-8") %>% html_nodes("h3 a") %>% html_text()
   Author = url.other[x] %>%read_html("UTF-8") %>% html_nodes("p.c-author") %>% html_text()
   Abstract = url.other[x] %>%read_html("UTF-8") %>% html_nodes("div.c-summary.c-row") %>% html_text()
   cbind(Title,Author,Abstract)
 }
-
-## 其他页面提取
+```
+### 用sapply函数实现循环爬取
+```r
 page.other = sapply(1:37,function(i) myfun(i))
+```
 
-## 检查爬取失败的情况
+### 检查爬取失败的情况
+```r
 evil=as.matrix(cbind(evil=1:37,tf=sapply(1:37,function(i) ncol(page.other[[i]]) !=3)))
 evil[evil[,2]==1,]
+```
 
-## 可以看看哪些部分出错
+### 看看是哪些部分出错
+```r
 names=matrix(rep(NA,37*6),ncol=6)
 for (i in 1:37) {
   names[i,]=colnames(page.other[[i]])
   names[i,duplicated(names[i,1:3])] <- NA
 }
 cbind(evil[evil[,2]==1,1],names[is.na(names[,3]),1:3])
+```
 
-## 出错的页面重新爬，直到成功为止
+### 出错的页面重新爬，直到成功为止
+```r
 i=1
 while(i<37){
   if (ncol(page.other[[i]]) != 3) page.other[[i]]=myfun(i)
   i=i+as.numeric(ncol(page.other[[i]])==3)
 }
+```
 
-## 再确认一边有没有漏掉的
+### 最后确认一边有没有漏掉的，再合并页面
+```r
 evil=as.matrix(cbind(evil=1:37,tf=sapply(1:37,function(i) ncol(page.other[[i]]) !=3)))
 evil[evil[,2]==1,]
-
 ## 合并所页面
 i=1
 while(i<=37) {
