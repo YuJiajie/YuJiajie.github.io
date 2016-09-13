@@ -43,7 +43,7 @@ Abstract <- url %>% read_html("UTF-8") %>% html_nodes("div.c-summary.c-row") %>%
 page <- cbind(Title,Author,Abstract)
 ```
 ### 其余页面既然有规律就可以用循环来完成每页的重复工作
-首先是生成剩余页面的地址(共38页,每页20条新闻)。这里需要注意的是"pn"的规律，pn=(n-1)*20，最后一页可能并没有20条记录。
+首先是生成剩余页面的地址，剩下37页,每页20条新闻。这里需要注意的是"pn"的规律，pn=(n-1)*20，最后一页可能并没有20条记录。
 ```r
 url.other <- sapply(seq(20,37*20,20),function(i) {
   str_c("http://news.baidu.com/ns?word=%E6%9E%97%E4%B8%B9%20%E6%9D%8E%E5%AE%97%E4%BC%9F&pn=",i,"&cl=2&ct=0&tn=news&rn=20&ie=utf-8&bt=0&et=0")
@@ -88,7 +88,7 @@ while(i<37){
 }
 ```
 
-### 最后确认一边有没有漏掉的，再合并页面
+### 确认一遍有没有漏掉的记录，最后再合并页面
 ```r
 evil=as.matrix(cbind(evil=1:37,tf=sapply(1:37,function(i) ncol(page.other[[i]]) !=3)))
 evil[evil[,2]==1,]
