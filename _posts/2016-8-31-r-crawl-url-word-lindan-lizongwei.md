@@ -22,33 +22,35 @@ icon: bullhorn
 
 ## 2.爬取新闻标题+来源和时间+摘要
 
-2016年8月21日，进入百度新闻，搜索[林丹 李宗伟]，共给返回38页结果，前37页每页20条，第38页18条，共758条新闻。简单分析一下，第一页网址固定，第二页至第38页通过"pn"索引。
+2016年8月21日，进入百度新闻，搜索[林丹 李宗伟]，共给返回38页结果，前37页每页20条，第38页18条，共758条新闻。简单分析一下，第1页网址固定，第2页至第38页通过"pn"索引。
 
 ### 爬取网页数据用到的R包
 ```r
 library(rvest) 
 ```
+### 第1页内容爬取
 ```r
 ## 保存第1页网址
 url <- "http://news.baidu.com/ns?cl=2&rn=20&tn=news&word=%E6%9E%97%E4%B8%B9%20%E6%9D%8E%E5%AE%97%E4%BC%9F"
 
-## 读取（crawling)网页,UTF-8编码（似乎并没有什么用，编码格式依然保持原样）
+## 读取网页,定义了UTF-8编码，但似乎并没有什么用，编码格式依然保持原样
 ## 保存网页中的“标题”，“来源和时间”，“摘要”
 Title <- url %>% read_html("UTF-8") %>% html_nodes("h3 a") %>% html_text()
 Author <- url %>% read_html("UTF-8") %>% html_nodes("p.c-author") %>% html_text()
 Abstract <- url %>% read_html("UTF-8") %>% html_nodes("div.c-summary.c-row") %>% html_text()
 
-## 保存为DataFrame
+## 将页面信息保存为DataFrame格式
 page <- cbind(Title,Author,Abstract)
-
-## 其余页码的地址用循环生成(共38页,每页20条新闻)
+```
+### 其余页面既然有规律就可以用循环来完成每页的重复工作
+首先是生成剩余页面的地址(共38页,每页20条新闻)。这里需要注意的是"pn"的规律，pn=(n-1)*20，最后一页可能并没有20条记录。
+```r
 url.other <- sapply(seq(20,37*20,20),function(i) {
   str_c("http://news.baidu.com/ns?word=%E6%9E%97%E4%B8%B9%20%E6%9D%8E%E5%AE%97%E4%BC%9F&pn=",i,"&cl=2&ct=0&tn=news&rn=20&ie=utf-8&bt=0&et=0")
   })
 ```
-### 其余页面既然有规律就可以用循环来完成每页的重复工作
+每页相同的工作
 ```r
-## 每页相同的工作
 myfun = function(x) {
   Title = url.other[x] %>%read_html("UTF-8") %>% html_nodes("h3 a") %>% html_text()
   Author = url.other[x] %>%read_html("UTF-8") %>% html_nodes("p.c-author") %>% html_text()
