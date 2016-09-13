@@ -1,12 +1,11 @@
 ---
-layout:post
+layout: post
 keywords: rvest R wordcloud2 Rwordseg
 description: blog
 title: R爬取百度新闻数据
 categories: [R随笔]
 tags: [R 爬数据 词云 林丹 李宗伟]
-group: 
-archive
+group: archive
 icon: bullhorn
 ---
 据里约奥运闭幕都已过去9天，8月19日那场“李林之战”的余热早已被建林的“小目标”淹没。当时答应的稿子也拖到不了了之（默哀三分钟……
