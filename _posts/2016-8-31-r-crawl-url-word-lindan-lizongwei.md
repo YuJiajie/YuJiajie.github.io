@@ -64,6 +64,7 @@ page.other = sapply(1:37,function(i) myfun(i))
 ```
 
 ### 检查爬取失败的情况
+预定是抓3个内容，在反复抓取的时候，就会出现漏掉某些项的情况，也没找到具体原因。曾怀疑是网站为防止大量抓取做的设定，试过在每次抓取完后暂停3秒，模拟人为访问的情况，仍然会随机出现遗漏，这个问题就暂时放下了。检查时只要找出结果中不是3列的即可。
 ```r
 evil=as.matrix(cbind(evil=1:37,tf=sapply(1:37,function(i) ncol(page.other[[i]]) !=3)))
 evil[evil[,2]==1,]
